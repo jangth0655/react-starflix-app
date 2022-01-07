@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/react-starflix-app/static/js/main.ee48c40f.js",
+    "main.js": "/react-starflix-app/static/js/main.6b74029a.js",
     "index.html": "/react-starflix-app/index.html",
-    "main.ee48c40f.js.map": "/react-starflix-app/static/js/main.ee48c40f.js.map"
+    "main.6b74029a.js.map": "/react-starflix-app/static/js/main.6b74029a.js.map"
   },
   "entrypoints": [
-    "static/js/main.ee48c40f.js"
+    "static/js/main.6b74029a.js"
   ]
 }
