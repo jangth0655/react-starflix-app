@@ -7,24 +7,15 @@ import Tv from "./router/Tv";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Header />
       <Routes>
-        <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
-        <Route
-          path={process.env.PUBLIC_URL + "/movies/:movieId"}
-          element={<Home />}
-        />
-        <Route
-          path={process.env.PUBLIC_URL + "/tv/now/:tvId"}
-          element={<Tv />}
-        />
-        <Route
-          path={process.env.PUBLIC_URL + "/tv/popular/:tvName"}
-          element={<Tv />}
-        />
-        <Route path={`${process.env.PUBLIC_URL}/tv`} element={<Tv />} />
-        <Route path={`${process.env.PUBLIC_URL}/search`} element={<Search />} />
+        <Route path={"/"} element={<Home />} />
+        <Route path={"/movies/:movieId"} element={<Home />} />
+        <Route path={"/tv/now/:tvId"} element={<Tv />} />
+        <Route path={"/tv/popular/:tvName"} element={<Tv />} />
+        <Route path={"/tv"} element={<Tv />} />
+        <Route path={"/search"} element={<Search />} />
       </Routes>
     </Router>
   );
