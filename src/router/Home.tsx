@@ -324,10 +324,10 @@ const Home = () => {
   const toggleLeaving = () => setLeaving((pre) => !pre);
 
   const showingBigMovie = (movieId: number) => {
-    navigate(`${process.env.PUBLIC_URL}/movies/${movieId}`);
+    navigate(`/movies/${movieId}`);
   };
   const onOverlayClick = () => {
-    navigate(`${process.env.PUBLIC_URL}/`);
+    navigate("/");
   };
 
   const isLoading = nowPlayingLoading;

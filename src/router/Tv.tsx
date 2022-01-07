@@ -398,14 +398,14 @@ const Tv = () => {
 
   const toggleLeaving = () => setLeaving((pre) => !pre);
   const toggleOverlayer = () => {
-    navigate(`${process.env.PUBLIC_URL}/tv`);
+    navigate("/tv");
   };
 
   const nowShowingTvId = (tvId: number) => {
-    navigate(`${process.env.PUBLIC_URL}/tv/now/${tvId}`);
+    navigate(`/tv/now/${tvId}`);
   };
   const popShowingTvId = (tvName: string) => {
-    navigate(`${process.env.PUBLIC_URL}/tv/popular/${tvName}`);
+    navigate(`/tv/popular/${tvName}`);
   };
 
   const rightDirection = () => {

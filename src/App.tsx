@@ -10,17 +10,17 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+        <Route path={process.env.PUBLIC_URL + "/"} element={<Home />} />
         <Route
-          path={`${process.env.PUBLIC_URL}/movies/:movieId`}
+          path={process.env.PUBLIC_URL + "/movies/:movieId"}
           element={<Home />}
         />
         <Route
-          path={`${process.env.PUBLIC_URL}/tv/now/:tvId`}
+          path={process.env.PUBLIC_URL + "/tv/now/:tvId"}
           element={<Tv />}
         />
         <Route
-          path={`${process.env.PUBLIC_URL}/tv/popular/:tvName`}
+          path={process.env.PUBLIC_URL + "/tv/popular/:tvName"}
           element={<Tv />}
         />
         <Route path={`${process.env.PUBLIC_URL}/tv`} element={<Tv />} />
