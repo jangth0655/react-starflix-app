@@ -172,7 +172,7 @@ const Overlay = styled(motion.div)`
 
 const BigMovie = styled(motion.div)`
   z-index: 2;
-  width: 30em;
+  width: 25em;
   max-height: 30em;
   background-color: ${(props) => props.theme.colors.black.dark};
   position: absolute;
@@ -181,6 +181,7 @@ const BigMovie = styled(motion.div)`
   right: 0;
   margin: auto;
   border-radius: ${(props) => props.theme.borderRadius};
+  overflow: hidden;
 `;
 
 const BigMovieImg = styled.div<{ moviePoster: string }>`
@@ -223,6 +224,7 @@ const ButtonBox = styled.div`
     position: relative;
     transition: all 0.3s ease-in-out;
     font-size: 1.2rem;
+    border: none;
   }
   button:hover {
     color: ${(prop) => prop.theme.colors.active};
@@ -240,7 +242,7 @@ const Line = styled.div`
   margin-top: 1em;
   opacity: 0.3;
   background-color: ${(prop) => prop.theme.colors.active};
-  width: 65%;
+  width: 80%;
   height: 1px;
 `;
 

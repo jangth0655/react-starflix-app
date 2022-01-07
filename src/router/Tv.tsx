@@ -41,6 +41,9 @@ const BannerTitle = styled.p`
 
 const BannerOverview = styled.p`
   margin-top: 1em;
+  @media screen and (max-height: 50em) {
+    display: none;
+  }
 `;
 
 const SliderTitle = styled.h1`
@@ -49,6 +52,9 @@ const SliderTitle = styled.h1`
   font-weight: 600;
   font-style: italic;
   color: ${(prop) => prop.theme.colors.active};
+  @media screen and (max-width: 43em) {
+    font-size: 0.875rem;
+  }
 `;
 
 const SliderBox = styled.div`
@@ -198,8 +204,8 @@ const PopOverLayer = styled(motion.div)`
 const BigNowTvShow = styled(motion.div)`
   z-index: 3;
   position: absolute;
-  width: 30em;
-  height: 33em;
+  width: 25em;
+  height: 30em;
   bottom: 0;
   left: 0;
   right: 0;
@@ -212,8 +218,8 @@ const BigNowTvShow = styled(motion.div)`
 const BigPopTvShow = styled(motion.div)`
   z-index: 3;
   position: absolute;
-  width: 30em;
-  height: 33em;
+  width: 25em;
+  height: 30em;
   bottom: 0;
   left: 0;
   right: 0;
