@@ -41,6 +41,9 @@ const BannerTitle = styled.p`
 `;
 const BannerOverview = styled.p`
   margin-top: 1em;
+  @media screen and (max-height: 50em) {
+    display: none;
+  }
 `;
 
 const Slide = styled.div`
