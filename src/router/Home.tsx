@@ -311,6 +311,8 @@ const Home = () => {
       (movie) => movie.id === Number(movieMatch?.params.movieId)
     );
 
+  console.log(nowPlayingLoading);
+
   const onPage = () => {
     if (nowPlaying) {
       if (leaving) return;
@@ -348,11 +350,11 @@ const Home = () => {
           >
             <BannerDescription>
               <BannerTitle>
-                {clickMovie ? clickMovie.title : nowPlaying?.results[0].title}
+                {clickMovie ? clickMovie?.title : nowPlaying?.results[0].title}
               </BannerTitle>
               <BannerOverview>
                 {clickMovie
-                  ? clickMovie.title
+                  ? clickMovie?.title
                   : nowPlaying?.results[0].overview}
               </BannerOverview>
             </BannerDescription>
@@ -458,14 +460,14 @@ const Home = () => {
                     <>
                       <BigMovieImg
                         moviePoster={makeImage(
-                          clickMovie.backdrop_path,
+                          clickMovie?.backdrop_path,
                           "w500"
                         )}
                       ></BigMovieImg>
                       <BigMovieDescription>
                         <BigMovieInfo>
-                          <InfoTitle>{clickMovie.title}</InfoTitle>
-                          <InfoOverview>{clickMovie.overview}</InfoOverview>
+                          <InfoTitle>{clickMovie?.title}</InfoTitle>
+                          <InfoOverview>{clickMovie?.overview}</InfoOverview>
                         </BigMovieInfo>
 
                         <BigMovieMetaInfo>

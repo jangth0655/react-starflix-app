@@ -8,6 +8,7 @@ import { faHandPointUp } from "@fortawesome/free-solid-svg-icons";
 import { faHandPointDown } from "@fortawesome/free-solid-svg-icons";
 import { faSave } from "@fortawesome/free-solid-svg-icons";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
+import Loader from "../components/Loader";
 
 const Main = styled.div`
   display: flex;
@@ -140,7 +141,9 @@ const Search = () => {
     getSearchItem(keyword as string)
   );
 
-  return isLoading ? null : (
+  return isLoading ? (
+    <Loader />
+  ) : (
     <Main>
       {/* Item */}
       <Item>

@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointUp } from "@fortawesome/free-solid-svg-icons";
 import { faHandPointDown } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import Loader from "../components/Loader";
 
 const Main = styled.main`
   @media screen and (max-width: 43em) {
@@ -426,7 +427,9 @@ const Tv = () => {
 
   return (
     <Main>
-      {isLoading ? null : (
+      {isLoading ? (
+        <Loader></Loader>
+      ) : (
         <>
           {/* Banner */}
           <Banner
