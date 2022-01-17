@@ -228,6 +228,9 @@ const ButtonBox = styled.div`
     transition: all 0.3s ease-in-out;
     font-size: 1.2rem;
     border: none;
+    @media screen and (max-width: 40em) {
+      font-size: 0.8rem;
+    }
   }
   button:hover {
     color: ${(prop) => prop.theme.colors.active};
@@ -265,6 +268,9 @@ const InfoTitle = styled.p`
   font-weight: 600;
   top: 47%;
   position: absolute;
+  @media screen and (max-width: 40em) {
+    font-size: 0.9rem;
+  }
 `;
 
 const InfoOverview = styled.p`
@@ -272,6 +278,9 @@ const InfoOverview = styled.p`
   font-size: 0.9rem;
   width: fit-content;
   height: 100%;
+  @media screen and (max-width: 40em) {
+    font-size: 0.8rem;
+  }
 `;
 
 const OverlayVariants = {
@@ -310,8 +319,6 @@ const Home = () => {
     nowPlaying?.results.find(
       (movie) => movie.id === Number(movieMatch?.params.movieId)
     );
-
-  console.log(nowPlayingLoading);
 
   const onPage = () => {
     if (nowPlaying) {

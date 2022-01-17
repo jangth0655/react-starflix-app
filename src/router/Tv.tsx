@@ -263,8 +263,11 @@ const TvTitle = styled.p`
   color: ${(props) => props.theme.colors.active};
   font-size: 1.2rem;
   font-weight: 600;
-  top: 47%;
+  top: 44%;
   position: absolute;
+  @media screen and (max-width: 40em) {
+    font-size: 0.9rem;
+  }
 `;
 
 const TvOverview = styled.p`
@@ -272,6 +275,9 @@ const TvOverview = styled.p`
   font-size: 0.9rem;
   width: fit-content;
   height: 100%;
+  @media screen and (max-width: 40em) {
+    font-size: 0.8rem;
+  }
 `;
 
 const TvMetaInfo = styled.div`
@@ -294,6 +300,9 @@ const ButtonBox = styled.div`
     position: relative;
     transition: all 0.3s ease-in-out;
     font-size: 1.2rem;
+    @media screen and (max-width: 40em) {
+      font-size: 0.8rem;
+    }
   }
   button:hover {
     color: ${(prop) => prop.theme.colors.active};
@@ -322,6 +331,9 @@ const TvFirstOnAir = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  @media screen and (max-width: 40em) {
+    font-size: 0.8rem;
+  }
 `;
 
 const TvVote = styled.div`
@@ -331,6 +343,9 @@ const TvVote = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  @media screen and (max-width: 40em) {
+    font-size: 0.8rem;
+  }
 `;
 
 const OverlayerVariants = {
