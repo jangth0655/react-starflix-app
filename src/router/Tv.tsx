@@ -111,6 +111,9 @@ const TvRight = styled(motion.div)`
     width: 30%;
     height: 30%;
   }
+  @media screen and (max-width: 40em) {
+    width: 1.5em;
+  }
 `;
 
 const TvLeft = styled(motion.div)`
@@ -132,6 +135,9 @@ const TvLeft = styled(motion.div)`
     color: ${(props) => props.theme.colors.white.light};
     width: 30%;
     height: 30%;
+  }
+  @media screen and (max-width: 40em) {
+    width: 1.5em;
   }
 `;
 

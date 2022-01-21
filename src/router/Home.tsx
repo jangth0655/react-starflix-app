@@ -12,7 +12,7 @@ import { faHandPointDown } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Main = styled.div`
-  @media screen and (max-width: 43em) {
+  @media screen and (max-width: 40em) {
     font-size: 0.875rem;
   }
 `;
@@ -97,6 +97,9 @@ const ChangeRightItem = styled(motion.div)`
     width: 30%;
     height: 30%;
   }
+  @media screen and (max-width: 40em) {
+    width: 1.5em;
+  }
 `;
 
 const ChangeLeftItem = styled(motion.div)`
@@ -117,6 +120,9 @@ const ChangeLeftItem = styled(motion.div)`
     color: ${(props) => props.theme.colors.white.light};
     width: 30%;
     height: 30%;
+  }
+  @media screen and (max-width: 40em) {
+    width: 1.5em;
   }
 `;
 
@@ -176,7 +182,7 @@ const Overlay = styled(motion.div)`
 const BigMovie = styled(motion.div)`
   z-index: 2;
   width: 25em;
-  max-height: 30em;
+  max-height: 80vh;
   background-color: ${(props) => props.theme.colors.black.dark};
   position: absolute;
   bottom: 0;
@@ -192,7 +198,7 @@ const BigMovieImg = styled.div<{ moviePoster: string }>`
     url(${(props) => props.moviePoster});
   background-size: cover;
   background-position: center center;
-  height: 50%;
+  height: 40%;
 `;
 
 const BigMovieDescription = styled.div`
@@ -266,7 +272,7 @@ const InfoTitle = styled.p`
   color: ${(props) => props.theme.colors.active};
   font-size: 1.2rem;
   font-weight: 600;
-  top: 47%;
+  top: 38%;
   position: absolute;
   @media screen and (max-width: 40em) {
     font-size: 0.9rem;
@@ -476,7 +482,6 @@ const Home = () => {
                           <InfoTitle>{clickMovie?.title}</InfoTitle>
                           <InfoOverview>{clickMovie?.overview}</InfoOverview>
                         </BigMovieInfo>
-
                         <BigMovieMetaInfo>
                           <InfoIcon>
                             <ButtonBox>
