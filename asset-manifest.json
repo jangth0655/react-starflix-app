@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/react-starflix-app/static/js/main.db54daca.js",
+    "main.js": "/react-starflix-app/static/js/main.d60cf44a.js",
     "index.html": "/react-starflix-app/index.html",
-    "main.db54daca.js.map": "/react-starflix-app/static/js/main.db54daca.js.map"
+    "main.d60cf44a.js.map": "/react-starflix-app/static/js/main.d60cf44a.js.map"
   },
   "entrypoints": [
-    "static/js/main.db54daca.js"
+    "static/js/main.d60cf44a.js"
   ]
 }
