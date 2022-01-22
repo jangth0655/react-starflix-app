@@ -146,56 +146,58 @@ const Search = () => {
   ) : (
     <Main>
       {/* Item */}
-      <Item>
-        <ItemImg
-          bgPoster={makeImage(
-            data?.results[0]?.backdrop_path
-              ? data?.results[0]?.backdrop_path
-              : data?.results[0]?.poster_path || "",
-            "w500"
-          )}
-        ></ItemImg>
-        <ItemInfo>
-          <ItemDescription>
-            <ItemTitle>{data?.results[0]?.title}</ItemTitle>
-            <ItemIconBox>
-              <button>
-                <FontAwesomeIcon icon={faSave} />
-                <span>저장</span>
-              </button>
-              <button>
-                <FontAwesomeIcon icon={faHandPointUp} />
-                <span>좋아요</span>
-              </button>
-              <button>
-                <FontAwesomeIcon icon={faHandPointDown} />
-                <span>싫어요</span>
-              </button>
-              <button>
-                <FontAwesomeIcon icon={faShare} />
-                <span>공유</span>
-              </button>
-            </ItemIconBox>
-            <Line></Line>
-            <OverView>
-              <p>{data?.results[0].overview}</p>
-            </OverView>
-          </ItemDescription>
-        </ItemInfo>
-      </Item>
-      {/* Item-List */}
-      <ItemListUl>
-        {data?.results.map((item) => (
-          <ItemListLi key={item.id}>
-            <ListImage
-              bgImage={makeImage(
-                item.backdrop_path ? item.backdrop_path : item.poster_path
-              )}
-            ></ListImage>
-            <ListTitle></ListTitle>
-          </ItemListLi>
-        ))}
-      </ItemListUl>
+      <>
+        <Item>
+          <ItemImg
+            bgPoster={makeImage(
+              data?.results[0]?.backdrop_path
+                ? data?.results[0]?.backdrop_path
+                : data?.results[0]?.poster_path || "",
+              "w500"
+            )}
+          ></ItemImg>
+          <ItemInfo>
+            <ItemDescription>
+              <ItemTitle>{data?.results[0]?.title}</ItemTitle>
+              <ItemIconBox>
+                <button>
+                  <FontAwesomeIcon icon={faSave} />
+                  <span>저장</span>
+                </button>
+                <button>
+                  <FontAwesomeIcon icon={faHandPointUp} />
+                  <span>좋아요</span>
+                </button>
+                <button>
+                  <FontAwesomeIcon icon={faHandPointDown} />
+                  <span>싫어요</span>
+                </button>
+                <button>
+                  <FontAwesomeIcon icon={faShare} />
+                  <span>공유</span>
+                </button>
+              </ItemIconBox>
+              <Line></Line>
+              <OverView>
+                <p>{data?.results[0]?.overview}</p>
+              </OverView>
+            </ItemDescription>
+          </ItemInfo>
+        </Item>
+        {/* Item-List */}
+        <ItemListUl>
+          {data?.results.map((item) => (
+            <ItemListLi key={item.id}>
+              <ListImage
+                bgImage={makeImage(
+                  item.backdrop_path ? item.backdrop_path : item.poster_path
+                )}
+              ></ListImage>
+              <ListTitle></ListTitle>
+            </ItemListLi>
+          ))}
+        </ItemListUl>
+      </>
     </Main>
   );
 };
