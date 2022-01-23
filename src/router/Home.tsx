@@ -182,7 +182,7 @@ const Overlay = styled(motion.div)`
 const BigMovie = styled(motion.div)`
   z-index: 2;
   width: 25em;
-  max-height: 80vh;
+  height: 30em;
   background-color: ${(props) => props.theme.colors.black.dark};
   position: absolute;
   bottom: 0;

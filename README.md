@@ -8,7 +8,7 @@
 
 #### Specific Feature
 
-- react-router를 활용하여 movie page, tv show page 구분
+- movie page, tv show page 구분
 - slider에 있는 아이템 클릭 -> 각각의 해당 프로그램 소개
 - tv show page에서 현재 방영되는 프로그램과 인기있는 프로그램 소개
 - 검색 기능
