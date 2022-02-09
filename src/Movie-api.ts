@@ -20,7 +20,7 @@ export interface IMovieResults {
 }
 
 export function getNowMovies() {
-  return fetch(`${BASE_NAME}/movie/now_playing?api_key=${API_KEYS}`).then(
-    (response) => response.json()
-  );
+  return fetch(
+    `${BASE_NAME}/movie/now_playing?api_key=${API_KEYS}&language=ko`
+  ).then((response) => response.json());
 }

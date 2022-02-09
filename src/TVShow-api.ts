@@ -18,13 +18,13 @@ export interface IGetTvShow {
 }
 
 export function getNowTvShow() {
-  return fetch(`${BASE_NAME}/tv/on_the_air?api_key=${API_KEYS}`).then(
-    (response) => response.json()
-  );
+  return fetch(
+    `${BASE_NAME}/tv/on_the_air?api_key=${API_KEYS}&language=ko`
+  ).then((response) => response.json());
 }
 
 export function getPopTvShow() {
-  return fetch(`${BASE_NAME}/tv/popular?api_key=${API_KEYS}`).then((response) =>
-    response.json()
+  return fetch(`${BASE_NAME}/tv/popular?api_key=${API_KEYS}&language=ko`).then(
+    (response) => response.json()
   );
 }
